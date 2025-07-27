@@ -15,7 +15,7 @@ void generate_random_array(int array[], int length) {
     }
 }
 
-void print_arrey(int array[], int begin, int end) {
+void print_array(int array[], int begin, int end) {
     printf("[");
     for (int i = begin; i <= end; i++) {
         if (i > begin){
