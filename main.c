@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdbool.h>
 #define SORT_IMPL
 #include "sort.h"
 
@@ -45,5 +44,13 @@ int main(void) {
     generate_random_array(numbers, length);
     time = sort_get_time(numbers, length, bubble_sort);
     printf("Time to bubble sort %d elements is %lf.\n", ARRAY_CAPACITY, time);
+
+    generate_random_array(numbers, length);
+    time = sort_get_time(numbers, length, bubble_sort_with_reverse);
+    printf("Time to bubble sort with reverse %d elements is %lf.\n", ARRAY_CAPACITY, time);
+
+    generate_random_array(numbers, length);
+    time = sort_get_time(numbers, length, gnome_sort);
+    printf("Time to gnome %d elements is %lf.\n", ARRAY_CAPACITY, time);
     return 0;
 }
